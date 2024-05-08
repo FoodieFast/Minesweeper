@@ -173,51 +173,13 @@ void board::initalizeBoard() {
         else if (isPaused){
             pause(tile_Revealed);
         }
-        //Checks for Debug Mode
-        else if (isDebugMode){
-            debug_mode(face_Win, flagsPlaced, gameLeaderboard);
-        }
         // Checks for Game Over
         else if (isgameOver){
             gameOver();
         }
         else{
             // Draw the Tiles
-            int unRevealeaedTileCount = 0;
-            for (int curr_vert = 0; curr_vert < minesTall; curr_vert++) {
-                for (int curr_horz = 0; curr_horz < minesLong; curr_horz++) {
-                    tile currTile = tileBoard[curr_vert][curr_horz];
-                    sf::Sprite currSprite = currTile.getSprite();
-                    boardWindow.draw(currSprite);
-
-                    // Conditions for flag to be drawn: flag is placed, tile is not revealed
-                    if (currTile.is_Flagged() && !currTile.is_Revealed()){
-                        boardWindow.draw(currTile.getFlagSprite());
-                    }
-                    if (!currTile.is_Revealed()) {
-                        unRevealeaedTileCount ++;
-                    }
-                    if (currTile.is_Revealed() && currTile.getAdjacentMines() > 0) {
-                        if (currTile.getAdjacentMines() == 1){boardWindow.draw(currTile.getSprite1());}
-                        else if (currTile.getAdjacentMines() == 2){boardWindow.draw(currTile.getSprite2());}
-                        else if (currTile.getAdjacentMines() == 3){boardWindow.draw(currTile.getSprite3());}
-                        else if (currTile.getAdjacentMines() == 4){boardWindow.draw(currTile.getSprite4());}
-                        else if (currTile.getAdjacentMines() == 5){boardWindow.draw(currTile.getSprite5());}
-                        else if (currTile.getAdjacentMines() == 6){boardWindow.draw(currTile.getSprite6());}
-                        else if (currTile.getAdjacentMines() == 7){boardWindow.draw(currTile.getSprite7());}
-                        else if (currTile.getAdjacentMines() == 8){boardWindow.draw(currTile.getSprite8());}
-                    }
-                }
-            }
-            if (unRevealeaedTileCount <= mines && mines - flagsPlaced == 0){
-                face.setTexture(face_Win);
-                if (!isGameWon){
-                    gameLeaderboard.updateLeaderboard(playerName, elapsedSeconds);
-                }
-
-                isGameWon = true;
-
-            }
+            drawBoard(face_Win, flagsPlaced, gameLeaderboard);
         }
 
 
@@ -352,7 +314,7 @@ void board::placeMines(int numMines) {
     }
 }
 
-void board::debug_mode(sf::Texture &face_Happy, const int flagsPlaced, leaderboard &gameLeaderboard) {
+void board::drawBoard(sf::Texture &face_Happy, const int flagsPlaced, leaderboard &gameLeaderboard) {
     int unRevealeaedTileCount = 0;
     for (int curr_vert = 0; curr_vert < minesTall; curr_vert++) {
         for (int curr_horz = 0; curr_horz < minesLong; curr_horz++) {
@@ -361,6 +323,7 @@ void board::debug_mode(sf::Texture &face_Happy, const int flagsPlaced, leaderboa
             sf::Sprite currSprite = currTile.getSprite();
             boardWindow.draw(currSprite);
 
+            // If Debug Mode is true, draws mine
             if (currTile.is_Mine() && isDebugMode){
                 boardWindow.draw(currTile.getMineSprite());
             }
@@ -373,6 +336,7 @@ void board::debug_mode(sf::Texture &face_Happy, const int flagsPlaced, leaderboa
             if (!currTile.is_Revealed()) {
                 unRevealeaedTileCount ++;
             }
+
             if (currTile.is_Revealed() && currTile.getAdjacentMines() > 0) {
                 if (currTile.getAdjacentMines() == 1){boardWindow.draw(currTile.getSprite1());}
                 else if (currTile.getAdjacentMines() == 2){boardWindow.draw(currTile.getSprite2());}
@@ -385,6 +349,7 @@ void board::debug_mode(sf::Texture &face_Happy, const int flagsPlaced, leaderboa
             }
         }
     }
+
     // Game ends in a win
     if (unRevealeaedTileCount <= mines && mines - flagsPlaced == 0){
         face.setTexture(face_Happy);
@@ -393,7 +358,6 @@ void board::debug_mode(sf::Texture &face_Happy, const int flagsPlaced, leaderboa
         }
         isGameWon = true;
         isDebugMode = false;
-
     }
 }
 

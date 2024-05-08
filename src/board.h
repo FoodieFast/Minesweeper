@@ -69,6 +69,10 @@ public:
     void pause(sf::Texture &texture);
 
 
+    void drawBoard(sf::Texture &face_Happy, const int flagsPlaced, leaderboard &gameLeaderboard);
+
+
+
 };
 
 
