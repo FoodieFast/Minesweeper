@@ -1,6 +1,7 @@
 #include "board.h"
 #include <iostream>
 
+// Trying out Experimental Branch
 
 board::board(int width, int height, int mines, string nameinput){
     // Setup of variables
@@ -14,7 +15,7 @@ board::board(int width, int height, int mines, string nameinput){
     minesLong = static_cast<int>(width / 32) ;
     totalNonMineTiles = (minesTall*minesLong) - mines;
     tileBoard.resize(minesTall, vector<tile>(minesLong));
-    boardWindow.create(sf::VideoMode(width, height), "Minesweeper");
+    boardWindow.create(sf::VideoMode( width, height), "Minesweeper");
 
     // First initialization of board
     initalizeBoard();
