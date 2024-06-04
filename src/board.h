@@ -1,4 +1,5 @@
 #include "SFML/Graphics.hpp"
+#include "SFML/Audio.hpp"
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -41,10 +42,16 @@ class board {
     sf::Texture faceHappy;
     sf::Sprite playPauseButton;
     sf::Sprite leaderBoardButton;
+
     bool isPaused = false;
     bool isGameWon = false;
     bool WinLeaderBoard = false;
     bool isDebugMode = false;
+
+    sf::SoundBuffer clickBuffer;
+    sf::Sound clickSound;
+    sf::SoundBuffer victoryBuffer;
+    sf::Sound victorySound;
 
 
 
