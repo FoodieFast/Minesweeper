@@ -23,7 +23,7 @@ add_executable(sfml_example src/main.cpp
         "../Redundant Files/Tests.h"
         src/leaderboard.cpp
         src/leaderboard.h)
-target_link_libraries(sfml_example PRIVATE sfml-graphics)
+target_link_libraries(sfml_example PRIVATE sfml-graphics sfml-audio)
 target_compile_features(sfml_example PRIVATE cxx_std_17)
 
 install(TARGETS sfml_example)

@@ -1,6 +1,7 @@
 #include "board.h"
 #include <iostream>
 
+// Trying out Experimental Branch
 
 board::board(int width, int height, int mines, string nameinput){
     // Setup of variables
@@ -14,7 +15,7 @@ board::board(int width, int height, int mines, string nameinput){
     minesLong = static_cast<int>(width / 32) ;
     totalNonMineTiles = (minesTall*minesLong) - mines;
     tileBoard.resize(minesTall, vector<tile>(minesLong));
-    boardWindow.create(sf::VideoMode(width, height), "Minesweeper");
+    boardWindow.create(sf::VideoMode( width, height), "Minesweeper");
 
     // First initialization of board
     initalizeBoard();
@@ -99,6 +100,18 @@ void board::initalizeBoard() {
     // Leaderboard Button Sprite
     leaderBoardButton.setTexture(leaderboardTexture);
     leaderBoardButton.setPosition(sf::Vector2f((width)-176, (minesTall+.5)*32));
+
+    // Sound
+    if (!clickBuffer.loadFromFile("files/sounds/shovel_sound.mp3")){
+        std::cerr << "Error loading click sound file!" << std::endl;
+    }
+    clickSound.setBuffer(clickBuffer);
+
+    if (!victoryBuffer.loadFromFile("files/sounds/victory.mp3")){
+        std::cerr << "Error loading win sound file!" << std::endl;
+    }
+    victorySound.setBuffer(victoryBuffer);
+
 
     // Initialize the Tiles and add them to the grid
     for (int curr_vert = 0; curr_vert < minesTall; curr_vert++) {
@@ -197,6 +210,7 @@ void board::initalizeBoard() {
 
 
                 if (event.mouseButton.button == sf::Mouse::Left) {
+
                     // Checks if clicked on leaderboard button
 
                     if (event.mouseButton.x >= width-176 && event.mouseButton.x <= width-110 &&
@@ -273,7 +287,9 @@ void board::initalizeBoard() {
                                 }
                                 // If tile bordering mine, prints number of mines bordering, else recursively
                                 // checks tiles next to it:
+                                // Plays Shovel sound
                                 else{
+                                    clickSound.play();
                                     revealTile(x, y, tile_Revealed);
                                 }
                             }
@@ -358,6 +374,7 @@ void board::drawBoard(sf::Texture &face_Happy, const int flagsPlaced, leaderboar
         }
         isGameWon = true;
         isDebugMode = false;
+
     }
 }
 
