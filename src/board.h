@@ -26,7 +26,7 @@ class board {
     int minesLong;
     int revealedTiles = 0;
     int totalNonMineTiles;
-    tile bruh;
+
     TextureManager textures;
     string playerName;
 
@@ -69,7 +69,7 @@ public:
 
     void TimerUpdate(int time, sf::Sprite &counterDigit1, sf::Sprite &counterDigit2);
     void updateClock();
-    bool onLeftClick(int x, int y);
+
     int countAdjacentMines(int x, int y);
     void revealTile(int x, int y, sf::Texture &tileRevealed);
 

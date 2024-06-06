@@ -432,7 +432,7 @@ void board::TimerUpdate(int time, sf::Sprite &counterDigit1, sf::Sprite &counter
 }
 
 
-bool onLeftClick(int x, int y){}
+
 
 int board::countAdjacentMines(int x, int y) {
     int count = 0;
