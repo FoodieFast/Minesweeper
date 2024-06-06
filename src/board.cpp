@@ -206,13 +206,29 @@ void board::initalizeBoard() {
             if (event.type == sf::Event::MouseButtonPressed) {
                 int x = static_cast<int>(event.mouseButton.x / 32);
                 int y = static_cast<int>(event.mouseButton.y / 32);
+
+
+                // Handles Right Click, Control + Left Click
+                if (event.mouseButton.button == sf::Mouse::Left && sf::Keyboard::isKeyPressed(sf::Keyboard::LControl)
+                || event.mouseButton.button == sf::Mouse::Right){
+                    // Checks bounds
+                    if (y <= minesTall) {
+                        if (!tileBoard[y][x].is_Revealed()){
+                            if(tileBoard[y][x].RightClick(flag)){
+                                flagsPlaced -= 1;
+                                cout << "flags placed:" << flagsPlaced << endl;
+                            }
+                            else{
+                                flagsPlaced += 1;
+                                cout << "flags placed:" << flagsPlaced << endl;
+                            }
+                        }
+                    }
+                }
+
                 // Handle left click
-
-
-                if (event.mouseButton.button == sf::Mouse::Left) {
-
+                else if (event.mouseButton.button == sf::Mouse::Left) {
                     // Checks if clicked on leaderboard button
-
                     if (event.mouseButton.x >= width-176 && event.mouseButton.x <= width-110 &&
                         event.mouseButton.y >= (minesTall+.5)*32 && event.mouseButton.y <= ((minesTall+.5)*32)+64){
 
@@ -292,22 +308,6 @@ void board::initalizeBoard() {
                                     clickSound.play();
                                     revealTile(x, y, tile_Revealed);
                                 }
-                            }
-                        }
-                    }
-                }
-                // Handle right click
-                if (event.mouseButton.button == sf::Mouse::Right) {
-                    // Checks bounds
-                    if (y <= minesTall) {
-                        if (!tileBoard[y][x].is_Revealed()){
-                            if(tileBoard[y][x].RightClick(flag)){
-                                flagsPlaced -= 1;
-                                cout << "flags placed:" << flagsPlaced << endl;
-                            }
-                            else{
-                                flagsPlaced += 1;
-                                cout << "flags placed:" << flagsPlaced << endl;
                             }
                         }
                     }
