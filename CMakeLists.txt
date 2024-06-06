@@ -19,8 +19,6 @@ add_executable(sfml_example src/main.cpp
         src/TextureManager.h
         src/board.cpp
         src/board.h
-        "../Redundant Files/Tests.cpp"
-        "../Redundant Files/Tests.h"
         src/leaderboard.cpp
         src/leaderboard.h)
 target_link_libraries(sfml_example PRIVATE sfml-graphics sfml-audio)
