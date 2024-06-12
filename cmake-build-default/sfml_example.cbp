@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="sfml_example"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\opt\;CMake Files\..\..\..\opt\homebrew\;CMake Files\..\..\..\opt\homebrew\lib\;CMake Files\..\..\..\opt\homebrew\lib\cmake\;CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sfml_example">
+				<Option output="/Users/ericzhang/Minesweeper/cmake-build-default/bin/sfml_example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 sfml_example"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sfml_example/fast">
+				<Option output="/Users/ericzhang/Minesweeper/cmake-build-default/bin/sfml_example" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/opt/homebrew/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 sfml_example/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="/Users/ericzhang/Minesweeper/cmake-build-default"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ericzhang/Minesweeper/cmake-build-default/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/TextureManager.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/TextureManager.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/board.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/board.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/helper_functions.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/helper_functions.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/leaderboard.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/leaderboard.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/main.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/tile.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/tile.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/welcomWindow.cpp">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/src/welcomeWindow.h">
+			<Option target="sfml_example"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/../../../opt/homebrew/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/../../../opt/homebrew/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/../../../opt/homebrew/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/../../../opt/homebrew/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/ericzhang/Minesweeper/../../../opt/homebrew/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opt\homebrew\lib\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

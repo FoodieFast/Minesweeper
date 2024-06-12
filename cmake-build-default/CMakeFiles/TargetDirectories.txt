@@ -1,0 +1,7 @@
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/sfml_example.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/edit_cache.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/list_install_components.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/install.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/install/local.dir
+/Users/ericzhang/Minesweeper/cmake-build-default/CMakeFiles/install/strip.dir

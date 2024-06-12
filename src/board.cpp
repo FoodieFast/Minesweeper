@@ -305,7 +305,9 @@ void board::initalizeBoard() {
                                 // checks tiles next to it:
                                 // Plays Shovel sound
                                 else{
-                                    clickSound.play();
+                                    if (!currTile.is_Revealed()){
+                                        clickSound.play();
+                                    }
                                     revealTile(x, y, tile_Revealed);
                                 }
                             }
