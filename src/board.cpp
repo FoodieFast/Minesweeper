@@ -111,6 +111,7 @@ void board::initalizeBoard() {
         std::cerr << "Error loading win sound file!" << std::endl;
     }
     victorySound.setBuffer(victoryBuffer);
+    cout << 1 << endl;
 
 
     // Initialize the Tiles and add them to the grid
@@ -372,6 +373,8 @@ void board::drawBoard(sf::Texture &face_Happy, const int flagsPlaced, leaderboar
     if (unRevealeaedTileCount <= mines && mines - flagsPlaced == 0){
         face.setTexture(face_Happy);
         if (!isGameWon){
+            victorySound.play();
+            cout << "SOund!" << endl;
             gameLeaderboard.updateLeaderboard(playerName, elapsedSeconds);
         }
         isGameWon = true;
