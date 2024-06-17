@@ -111,7 +111,12 @@ void board::initalizeBoard() {
         std::cerr << "Error loading win sound file!" << std::endl;
     }
     victorySound.setBuffer(victoryBuffer);
-    cout << 1 << endl;
+
+    if (!buttonBuffer.loadFromFile("files/sounds/click_button.mp3")){
+        std::cerr << "Error loading button sound file!" << std::endl;
+    }
+    buttonSound.setBuffer(buttonBuffer);
+
 
 
     // Initialize the Tiles and add them to the grid
@@ -232,7 +237,7 @@ void board::initalizeBoard() {
                     // Checks if clicked on leaderboard button
                     if (event.mouseButton.x >= width-176 && event.mouseButton.x <= width-110 &&
                         event.mouseButton.y >= (minesTall+.5)*32 && event.mouseButton.y <= ((minesTall+.5)*32)+64){
-
+                        buttonSound.play();
                         if (!isPaused){
                             isPaused = true;
                             playPauseButton.setTexture(playButton);
@@ -260,6 +265,7 @@ void board::initalizeBoard() {
                     // Checks if clicked on Pause button
                     if (event.mouseButton.x >= width-240 && event.mouseButton.x <= width-176 &&
                         event.mouseButton.y >= (minesTall+.5)*32 && event.mouseButton.y <= ((minesTall+.5)*32)+64){
+                        buttonSound.play();
                         if (!isPaused){
                             isPaused = true;
                             playPauseButton.setTexture(playButton);
@@ -278,14 +284,21 @@ void board::initalizeBoard() {
                     // Checks if click in bounds of debug mode button
                     if (event.mouseButton.x >= width-304 && event.mouseButton.x <= width-240 &&
                     event.mouseButton.y >= (minesTall+.5)*32 && event.mouseButton.y <= ((minesTall+.5)*32)+64){
-                        if (!isDebugMode){isDebugMode = true;}
-                        else{isDebugMode = false;}
+                        buttonSound.play();
+                        if (!isDebugMode){
+                            isDebugMode = true;
+                        }
+                        else{
+                            isDebugMode = false;
+                        }
                     }
 
                     //Checks for happy face button
                     if (event.mouseButton.x >= (width/2)-32 && event.mouseButton.x <= (width/2)+32 &&
                             event.mouseButton.y >= (minesTall+.5)*32 && event.mouseButton.y <= ((minesTall+.5)*32)+64) {
                         cout << "Reset Board!" << endl;
+                        buttonSound.play();
+                        sf::sleep(sf::seconds(.4));
                         initalizeBoard();
                     }
 
