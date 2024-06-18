@@ -117,6 +117,10 @@ void board::initalizeBoard() {
     }
     buttonSound.setBuffer(buttonBuffer);
 
+    if (!boomBuffer.loadFromFile("files/sounds/explosion.mp3")){
+        std::cerr << "Error loading explosion sound file!" << std::endl;
+    }
+    boomSound.setBuffer(boomBuffer);
 
 
     // Initialize the Tiles and add them to the grid
@@ -313,6 +317,7 @@ void board::initalizeBoard() {
                                 // Check if clicked on a mine or not
                                 if (!tileBoard[y][x].LeftClick(tile_Revealed)) {
                                     isgameOver = true;
+                                    boomSound.play();
                                     face.setTexture(faceLose);
                                 }
                                 // If tile bordering mine, prints number of mines bordering, else recursively
@@ -387,7 +392,6 @@ void board::drawBoard(sf::Texture &face_Happy, const int flagsPlaced, leaderboar
         face.setTexture(face_Happy);
         if (!isGameWon){
             victorySound.play();
-            cout << "SOund!" << endl;
             gameLeaderboard.updateLeaderboard(playerName, elapsedSeconds);
         }
         isGameWon = true;

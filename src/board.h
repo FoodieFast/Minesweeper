@@ -54,6 +54,8 @@ class board {
     sf::Sound victorySound;
     sf::SoundBuffer buttonBuffer;
     sf::Sound buttonSound;
+    sf::SoundBuffer boomBuffer;
+    sf::Sound boomSound;
 
 
 
